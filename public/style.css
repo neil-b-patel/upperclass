@@ -1,92 +1,85 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-
-html, body {
-  height: 100%;
-  width: 100%;
+.hidden.menu {
+  display: none;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  background-image: url("/splash.png");
-  background-color: #220052;
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+.masthead .logo.item img {
+  margin-right: 1em;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em;
+}
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+}
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
 }
 
-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 536px;
-  margin: auto;
-  position: relative;
+.quote.stripe.segment {
+  padding: 0em;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
-section:before {
-  content: "";
-  position: absolute;
-  background: url("/pyramid.png") no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 402px;
-  z-index: -1;
+.footer.segment {
+  padding: 5em 0em;
 }
 
-.logo {
-  background: url("/logo.svg") no-repeat;
-  width: 36px;
-  height: 33px;
-  background-size: 100%;
-  margin-bottom: 35px;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
+.secondary.pointing.menu .toc.item {
+  display: none;
 }
 
-.title {
-  background: url("/title.svg") no-repeat;
-  width: 219px;
-  height: 36px;
-  background-size: 100%;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.2s forwards;
-}
-
-.subtitle {
-  margin-top: 25px;
-  color: #BDB3CB;
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: 0.5;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.5s forwards;
-}
-
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-p {
-  margin: 0.83rem 0;
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
   }
-  50% {
-    opacity: 0.2%;
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
   }
-  100% {
-    opacity: 1;
-    transform: none;
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
   }
 }
+

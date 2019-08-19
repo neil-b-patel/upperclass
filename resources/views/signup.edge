@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Signup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+      integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
+      crossorigin="anonymous"
+    />
+    {{ style('styleforsignup') }}
+  </head>
+  <body>
+    <div class="ui grid">
+      <div class="six wide column"></div>
+      <div class="ten wide column">
+        <div class="ui container" id="box">
+          <form class="ui form">
+            <h2>Welcome to majoredIn</h2>
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" name="first-name" placeholder="First Name" />
+              <label>Last Name</label>
+              <input type="text" name="last-name" placeholder="Last Name" />
+            </div>
+            <div class="field">
+              <label>College/University</label>
+              <input
+                type="text"
+                name="college-university"
+                placeholder="College/University"
+              />
+            </div>
+            <div class="field">
+              <label>Major/Interest</label>
+              <input type="text" name="last-name" placeholder="Major" />
+            </div>
+            <div class="field">
+              <label>Second Major/Interest</label>
+              <input type="text" name="last-name" placeholder="Major" />
+            </div>
+            <div class="field">
+              <label>Email Address</label>
+              <input
+                type="text"
+                name="last-name"
+                placeholder="e-mail address"
+              />
+            </div>
+            <div class="field">
+              <label>Password</label>
+              <input type="text" name="last-name" placeholder="Password" />
+            </div>
+            <div class="field">
+              <div class="ui checkbox">
+                <input type="checkbox" tabindex="0" class="hidden" />
+                <label>I agree to the Terms and Conditions</label>
+              </div>
+            </div>
+            <button class="ui button" type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
+      integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
