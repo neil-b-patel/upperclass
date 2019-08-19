@@ -16,4 +16,13 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.on('/').render('home')
+Route.on('/explore').render('explore')
+Route.on('/profiletemplate').render('profiletemplate')
+Route.on('/prac').render('prac')
+Route.on('/profile').render('profile')
+Route.on('/login').render('login')
+Route.on('/signup').render('signup')
+Route.on('/logout').render('logout')
+Route.on('/about').render('about')
+Route.on('/myprofile').render('myprofile')
