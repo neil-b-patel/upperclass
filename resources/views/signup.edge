@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Signup</title>
+    <title>Majoredin - Signup</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
@@ -13,13 +13,17 @@
     />
     {{ style('styleforsignup') }}
   </head>
+  </body>
   <body>
     <div class="ui grid">
-      <div class="six wide column"></div>
-      <div class="ten wide column">
+      <div class="four wide column">
+        <img class="sign-up" src="/images/sign-up.png" alt="sign-up" />
+      </div>
+      <div class="four wide column"></div>
+      <div class="eight wide column">
         <div class="ui container" id="box">
-          <form class="ui form">
-            <h2>Welcome to majoredIn</h2>
+          <form class="ui form" id="fn">
+            <h2>Welcome&nbsp;to&nbsp;Majoredin</h2>
             <div class="field">
               <label>First Name</label>
               <input type="text" name="first-name" placeholder="First Name" />
@@ -52,7 +56,7 @@
             </div>
             <div class="field">
               <label>Password</label>
-              <input type="text" name="last-name" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" />
             </div>
             <div class="field">
               <div class="ui checkbox">
