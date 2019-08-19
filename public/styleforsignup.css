@@ -1,14 +1,20 @@
 body {
-    height: 100%;
-    background-color: #007bff;
-  }
-  #box {
-    display: flex;
-    width: 75%;    
-    margin-top: 6%;
-    padding-top: 4%;
-    padding-left: 15%;
-    padding-bottom: 3%;
-    justify-content: left;
-    background-color: white;
-  }
+  height: 100%;
+  background-color: #007bff;
+}
+#box {
+  display: flex;
+  width: 80%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+  justify-content: center;
+  background-color: white;
+  margin-top: 6%;
+}
+/* * {
+        border: red 1px solid;
+      } */
+.sign-up {
+  height: 700px;
+  width: 900px;
+}
