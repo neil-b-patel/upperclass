@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +14,33 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
-Route.on('/').render('home')
-Route.on('/explore').render('explore')
-Route.on('/profiletemplate').render('profiletemplate')
-Route.on('/prac').render('prac')
-Route.on('/profile').render('profile')
-Route.on('/login').render('login')
-Route.on('/signup').render('signup')
-Route.on('/logout').render('logout')
-Route.on('/about').render('about')
-Route.on('/myprofile').render('myprofile')
+// landing page
+Route.on("/").render("landing");
+
+// explore page
+Route.on("/explore").render("explore");
+
+// profile page
+Route.on("/profile").render("profile");
+
+// login page
+Route.on("/login").render("auth.login");
+Route.post("/login", "UserController.login").validator("LoginUser");
+
+// signup page
+Route.on("/signup").render("auth.signup");
+Route.post("/signup", "UserController.create").validator("CreateUser");
+
+// logout page
+Route.get("/logout", async ({ auth, response }) => {
+  await auth.logout();
+  return response.redirect("/");
+});
+
+// about page
+Route.on("/about").render("about");
+
+// myprofile page
+Route.on("/myprofile").render("myprofile");

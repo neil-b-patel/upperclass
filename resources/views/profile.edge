@@ -1,4 +1,4 @@
-@layout('profiletemplate') 
+@layout('templates.profiletemplate') 
 @section('body')
 
 <div class="ui two column doubling stackable grid container">
@@ -8,32 +8,29 @@
   </div>
   <div class="ten wide column">
     <h1>
-      Sohee Kim
+      Insert Name
     </h1>
     <h3>
-      Mount Holyoke College
+      Insert College
       <br />
-      Class of 2022
+      Class of Insert_Year
     </h3>
   </div>
   <div class="five wide column">
     <table class="ui celled table">
       <tbody>
-        <tr>
-          <td>Profile</td>
-        </tr>
 
         <tr>
           <td>Pronoun</td>
-          <td>She / Her</td>
+          <td>Insert_Pronouns</td>
         </tr>
         <tr>
           <td>First-Gen</td>
-          <td>No</td>
+          <td>Insert_isFirst-Gen</td>
         </tr>
         <tr>
           <td>Athlete</td>
-          <td>No</td>
+          <td>Insert_isAthlete?</td>
         </tr>
       </tbody>
     </table>
@@ -47,7 +44,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>something here</td>
+          <td>Insert Bio</td>
         </tr>
       </tbody>
     </table>
@@ -57,12 +54,12 @@
     <table class="ui celled table">
       <thead>
         <tr>
-          <th>Interest</th>
+          <th>Study Abroad</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>maybe sth like a checklist</td>
+          <td>Insert Study_Abroad</td>
         </tr>
       </tbody>
     </table>
@@ -72,19 +69,18 @@
     <table class="ui celled table">
       <thead>
         <tr>
-          <th>Courses taken</th>
+          <th>Courses Taken</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <div class="ui bulleted list">
-              probably a better way of doing this
-              <div class="item">CS 121</div>
-              <div class="item">Math 232</div>
-              <div class="item">Chem 232</div>
-              <div class="item">Phil 450</div>
-            </div>
+            <ul>
+              <li>CSC 121</li>
+              <li>MAT 232</li>
+              <li>REL 232</li>
+              <li>PHI 450</li>
+            <ul>
           </td>
         </tr>
       </tbody>
