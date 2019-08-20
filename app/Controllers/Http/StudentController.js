@@ -29,35 +29,12 @@ class StudentController {
     return response.redirect("/myprofile");
   }
 
-  //   // currently deletes by typed in id
-  //   async deleteProfile({ response, params }) {
-  //     const { id } = params;
-  //     const profile = await Student.find(id);
-
-  //     if (profile) {
-  //       await profile.delete();
-  //       return response.redirect("/profile");
-  //     }
-  //   }
-
-  // edits profile
-
-  async edit({ request, response, session, params, auth, view }) {
-    // const { id } = params;
-    // const profile = await Student.find(id);
-    // const user = await User.find(3);
+  async edit({ request, response, session, params, auth, view }) {    
     const studentProfile = await auth.user.student().fetch();
 
     if (studentProfile) {
       return view.render("profile.edit", { studentProfile });
     }
-    // const userProfile = await user.student().fetch()
-    // console.log(userProfile)
-    // console.log(userProfile);
-    // if (profile) {
-    //   await profile.delete();
-    //   return response.render("edit-profile");
-    // }
 
     return response.redirect("/signup");
   }
