@@ -1,0 +1,130 @@
+@layout('templates.profiles')
+
+@section('body')
+{{ style('//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css') }}
+{{--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">  --}}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="list-group ">
+        <a href="#" class="list-group-item list-group-item-action">Edit Profile</a>
+        <a href="#" class="list-group-item list-group-item-action">Settings</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Edit Your Profile</h4>
+              <hr>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <form action="{{ route('StudentController.update') }}" method="POST">
+                {{ csrfField() }}
+
+                <div class="form-group row">
+                  <label for="firstName" class="col-4 col-form-label">First Name</label>
+                  <div class="col-8">
+                    <input id="firstName" name="first_name" class="form-control here"
+                      required="required" type="text" value = "{{ studentProfile.first_name }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="lastName" class="col-4 col-form-label">Last Name</label>
+                  <div class="col-8">
+                    <input id="lastName" name="last_name" class="form-control here"
+                      required="required" type="text" value = "{{ studentProfile.last_name }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="classYear" class="col-4 col-form-label">Class Year</label>
+                  <div class="col-8">
+                    <input id="classYear" name="year" class="form-control here" required="required"
+                      type="text" value = "{{ studentProfile.year }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="select" class="col-4 col-form-label">Major?</label>
+                  <div class="col-8">
+                    <select id="select" name="select" class="custom-select">
+                      <option value="cs">Computer Science</option>
+                      <option value="phil">Philosophy</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="studyAbroad" class="col-4 col-form-label">Study Abroad?</label>
+                  <div class="col-8">
+                    <input id="studyAbroad" name="abroad" placeholder="Spain" class="form-control here"
+                      required="required" type="text" value = "{{ studentProfile.abroad }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="funFact" class="col-4 col-form-label">Fun Fact</label>
+                  <div class="col-8">
+                    <input id="funFact" name="fun_fact" placeholder="I like ducks." class="form-control here"
+                      type="text" value = "{{ studentProfile.fun_fact }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="bio" class="col-4 col-form-label">Biography</label>
+                  <div class="col-8">
+                    <textarea id="bio" name="bio" cols="40" rows="4" class="form-control" value = "{{ studentProfile.bio }}"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="preLaw" class="col-4 col-form-label">Pre-Law?</label>
+                  <div class="col-8">
+                    <input id="preLaw" name="pre_law" class="form-control here" type="text" value = "{{ studentProfile.pre_law }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="preMed" class="col-4 col-form-label">Pre-Med?</label>
+                  <div class="col-8">
+                    <input id="preMed" name="pre_med" class="form-control here" type="text" value = "{{ studentProfile.pre_med }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="preDent" class="col-4 col-form-label">Pre-Dent?</label>
+                  <div class="col-8">
+                    <input id="preDent" name="pre_dent" class="form-control here" type="text" value = "{{ studentProfile.pre_dent }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label for="preEng" class="col-4 col-form-label">Pre-Eng?</label>
+                  <div class="col-8">
+                    <input id="preEng" name="pre_eng" class="form-control here" type="text" value = "{{ studentProfile.pre_eng }}">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="offset-4 col-8">
+                    <button name="submit" type="submit" class="btn btn-primary">Edit My Profile</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection

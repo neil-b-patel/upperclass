@@ -23,7 +23,7 @@ Route.on("/").render("landing");
 Route.on("/explore").render("explore");
 
 // profile page
-Route.on("/profile").render("profile");
+Route.on("/profile").render("profile.show");
 
 // login page
 Route.on("/login").render("auth.login");
@@ -46,7 +46,8 @@ Route.on("/about").render("about");
 // Route.on("/myprofile").render("myprofile");
 
 // testing routes
-// Route.get("/myprofile", "TestController.showProfile");
-Route.get("/myprofile", "StudentController.editProfile");
-Route.post("/myprofile", "StudentController.updateProfile")
+Route.get("/myprofile/create", "StudentController.show");
+Route.post("/myprofile/create", "StudentController.create");
+Route.get("/myprofile", "StudentController.edit");
+Route.post("/myprofile", "StudentController.update");
 // Route.get("/profile/delete/:id", "TestController.deleteProfile");
