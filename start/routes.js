@@ -43,4 +43,10 @@ Route.get("/logout", async ({ auth, response }) => {
 Route.on("/about").render("about");
 
 // myprofile page
-Route.on("/myprofile").render("myprofile");
+// Route.on("/myprofile").render("myprofile");
+
+// testing routes
+// Route.get("/myprofile", "TestController.showProfile");
+Route.get("/myprofile", "StudentController.editProfile");
+Route.post("/myprofile", "StudentController.updateProfile")
+// Route.get("/profile/delete/:id", "TestController.deleteProfile");
