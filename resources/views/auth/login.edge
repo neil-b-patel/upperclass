@@ -19,30 +19,33 @@
         <img class="logo" src="/images/logo.png">
         <h2 class="ui header">
           <div class="content">
-            Log in to Majoredin
+            Login to Majoredin
           </div>
         </h2>
-        <form class="ui large form">
+        <form class="ui large form" action="{{ route('UserController.login') }}" method="POST">
+          {{ csrfField() }}
           <div class="ui stacked segment">
             <div class="field">
               <div class="ui left icon input">
                 <i class="user icon"></i>
-                <input type="text" name="email" placeholder="E-mail address" />
+                <input type="email" name="email" placeholder="E-mail" value="{{ old('email', '') }}"/>
               </div>
             </div>
+
             <div class="field">
               <div class="ui left icon input">
                 <i class="lock icon"></i>
                 <input type="password" name="password" placeholder="Password" />
               </div>
             </div>
-            <div class="ui fluid large submit button">Login</div>
+
+            <div class="ui fluid large submit button" type="submit">Login</div>
           </div>
 
           <div class="ui error message"></div>
         </form>
         <div class="ui message">
-          Want to Join the majoredIn Community? <a href="#">Sign Up</a>
+          Want to Join the majoredIn Community? <a href="/signup">Sign Up</a>
         </div>
       </div>
     </div>
