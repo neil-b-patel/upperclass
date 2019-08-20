@@ -9,13 +9,11 @@ class UserController {
     );
 
     await auth.login(user);
-    return response.redirect("/myprofile");
+    return response.redirect("/myprofile/create");
   }
 
   async login({ request, auth, response, session }) {
     const { email, password } = request.all();
-
-    console.log(request.all())
 
     try {
       await auth.attempt(email, password);
