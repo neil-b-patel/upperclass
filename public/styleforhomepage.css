@@ -1,0 +1,135 @@
+body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serifl;
+}
+/* * {
+        border: 1px red solid;
+      } */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.container img {
+  height: 30%;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centered h1 {
+  font-size: 3em;
+  margin-bottom: 0%;
+}
+.centered h2 {
+  font-size: 3.2em;
+  margin-top: 0%;
+  margin-bottom: 5%;
+}
+.ui.grid .sixteen.wide.column {
+  padding: 0%;
+}
+.centered .button {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.eight.wide.column h1 {
+  display: table;
+  font-size: 3.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ui.large.secondary.inverted.pointing.menu a.item {
+  display: inline-flexbox;
+  font-size: 1.2em;
+}
+.ui.large.secondary.inverted.pointing.menu a.item {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0em 0em -2px;
+  padding: 0.85714286em 1.14285714em;
+  border-bottom-width: 2px;
+}
+.ui.menu:not(.vertical) .item > .button {
+  position: relative;
+  margin: 0em 0em -2px;
+  padding: 0.85714286em 1.14285714em;
+  font-size: 1em;
+}
+.eight.wide.column p {
+  font-weight: lighter;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+.eight.wide.column img.student {
+  margin-top: 0%;
+  padding-left: 10%;
+}
+.eight.wide.column h1.wwd {
+  display: table;
+  font-size: 3.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 45%;
+  left: 52%;
+  padding-right: 20%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0%;
+}
+.eight.wide.column p.wwd {
+  font-weight: lighter;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  display: table;
+}
+.ui.five.column.grid {
+  display: flexbox;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.eight.wide.column h1.relationship {
+  font-weight: lighter;
+  position: absolute;
+  top: 100%;
+}
+.eight.wide.column img.relationship {
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.eight.wide.column h1.insight {
+  font-weight: lighter;
+  position: absolute;
+  top: 100%;
+}
+.eight.wide.column img.insight {
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.sixteen.wide.column h1.last {
+  position: absolute;
+  left: 30%;
+  font-weight: lighter;
+  font-size: 3em;
+  top: 85%;
+}
+.sixteen.wide.column img.last {
+  margin-left: 10%;
+}

@@ -1,227 +1,217 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Standard Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <!-- Site Properties -->
-  <title>majoredIn - HomePage</title>
-  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
-
-  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
-
-  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/button.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
-  integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
-  crossorigin="anonymous"
-/>
-{{ style('style') }}
-{{--  {{style('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css')}}  --}}
-
-
-{{--  
-    i think this part is not working  --}}
-
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="../dist/components/visibility.js"></script>
-  <script src="../dist/components/sidebar.js"></script>
-  <script src="../dist/components/transition.js"></script>
-  <script>
-  $(document)
-    .ready(function() {
-
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-  </script>
-</head>
-<body>
-
-<!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
-  <div class="ui container">
-    <a href="/" class="active item">Home</a>
-    <a href="/about" class="item">About Us</a>
-    <a href="/explore" class="item">Explore</a>
-    {{--  <a class="item">Careers</a>  --}}
-    <div class="right menu">
-      <div class="item">
-        <a href="/login" class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a href="/signup" class="ui primary button">Start Here</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Sidebar Menu -->
-<div class="ui vertical inverted sidebar menu">
-  <a href="/" class="active item">Home</a>
-  <a href="/about" class="item">About Us</a>
-  <a href="/explore" class="item">Explore</a>
-  {{--  <a class="item">Careers</a>  --}}
-  <a href="/login" class="item">Log in</a>
-  <a href="/signup" class="item">Start Here</a>
-</div>
-
-
-<!-- Page Contents -->
-<div class="pusher" > 
-  <div class="ui inverted vertical masthead center aligned segment" id = "one">
-
-    <div class="ui container" id ="two">
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        <a href="/" class="active item">Home</a>
-        <a href="/about" class="item">About Us</a>
-        <a href="/explore" class="item">Explore</a>
-        {{--  <a class="item">Careers</a>  --}}
-        <div class="right item">
-          <a href="/login" class="ui inverted button">Log in</a>
-          <a href="/signup" class="ui inverted button">Start Here</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="ui text container">
-      <h1 class="ui inverted header">
-        Imagine-a-Community
-      </h1>
-      <h2>Connect with people who shared the same struggle.</h2>
-      <a href="/signup" class="ui huge primary button">Get Started</a>
-    </div>
-
-  </div>
-
-  <div class="ui vertical stripe segment">
-    <div class="ui middle aligned stackable grid container">
-      <div class="row">
-        <div class="eight wide column">
-          <h3 class="ui header">We Help Students.</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
-        </div>
-        <div class="six wide right floated column">
-          <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
-        </div>
-      </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="ui vertical stripe quote segment">
-    <div class="ui equal width stackable internally celled grid">
-      <div class="center aligned row">
-        <div class="column">
-          <h3>"What a Company"</h3>
-          <p>That is what they all say about us</p>
-        </div>
-        <div class="column">
-          <h3>"I shouldn't have gone with their competitor."</h3>
-          <p>
-            <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="ui vertical stripe segment">
-    <div class="ui text container">
-      <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-      <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-      <a class="ui large button">Read More</a>
-      <h4 class="ui horizontal header divider">
-        <a href="#">Case Studies</a>
-      </h4>
-      <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-      <p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-      <a class="ui large button">I'm Still Quite Interested</a>
-    </div>
-  </div>
-
-
-  <div class="ui inverted vertical footer segment">
-    <div class="ui container">
-      <div class="ui stackable inverted divided equal height stackable grid">
-        <div class="three wide column">
-          <h4 class="ui inverted header">About</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Sitemap</a>
-            <a href="#" class="item">Contact Us</a>
-            <a href="#" class="item">Religious Ceremonies</a>
-            <a href="#" class="item">Gazebo Plans</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Majoredin - Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+      integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
+      crossorigin="anonymous"
+    />
+    {{ style('styleforhomepage') }}
+    <script>
+        $(document)
+          .ready(function() {
+      
+            // fix menu when passed
+            $('.masthead')
+              .visibility({
+                once: false,
+                onBottomPassed: function() {
+                  $('.fixed.menu').transition('fade in');
+                },
+                onBottomPassedReverse: function() {
+                  $('.fixed.menu').transition('fade out');
+                }
+              })
+            ;
+      
+            // create sidebar and attach to menu open
+            $('.ui.sidebar')
+              .sidebar('attach events', '.toc.item')
+            ;
+      
+          })
+        ;
+        </script>
+  </head>
+  <body>
+    <div class="ui grid">
+      <!-- menu -->
+      <div class="sixteen wide column">
+        <div
+          class="ui inverted vertical masthead center aligned segment"
+          id="one"
+        >
+          <div class="ui container" id="two">
+            <div class="ui large secondary inverted pointing menu">
+              <a href="/" class="item"
+                >Majoredin<img src="/images/logo.png" width="30" height="40"
+              /></a>
+              <div class="right item">
+                <a href="/login" class="ui inverted button">Log in</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="three wide column">
-          <h4 class="ui inverted header">Services</h4>
-          <div class="ui inverted link list">
-            <a href="#" class="item">Banana Pre-Order</a>
-            <a href="#" class="item">DNA FAQ</a>
-            <a href="#" class="item">How To Access</a>
-            <a href="#" class="item">Favorite X-Men</a>
+      </div>
+
+      <!-- main image -->
+      <div class="sixteen wide column">
+        <div class="container">
+          <img
+            src="/images/community.jpeg"
+            alt="college students"
+            style="width:100%;"
+          />
+          <div class="centered">
+            <h1>Your Academic Advisor is Not Enough</h1>
+            <h2>You Deserve A Community</h2>
+            <div class="button">
+              <a href="/signup" class="large ui fluid blue button">
+                Join the Majoredin Community
+              </a>
+            </div>
           </div>
         </div>
-        <div class="seven wide column">
-          <h4 class="ui inverted header">Footer Header</h4>
-          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+      </div>
+
+      <!-- Mission Statement  -->
+      <div class="eight wide column">
+        <h1>Mission Statement</h1>
+        <p>
+          &nbsp;We believe that networking is important, but so is community.
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Why not have both?
+        </p>
+      </div>
+
+      <div class="eight wide column">
+        <img
+          src="/images/connect.png"
+          alt="handshake"
+          width="550"
+          height="500"
+        />
+      </div>
+
+      <!-- How it Works -->
+      <div class="eight wide column" style="margin-top: 0%;">
+        <img
+          class="student"
+          src="/images/last.png"
+          alt="people"
+          width="700"
+          height="650"
+        />
+      </div>
+      <div class="eight wide column" style="margin-top: 0%;">
+        <h1 class="wwd">How it Works</h1>
+        <p class="wwd">
+          Communities are created in liberal arts colleges through students
+          connecting and advising one another along with alumni.
+        </p>
+      </div>
+
+      <!-- Relationships & Insight -->
+      <div class="eight wide column" style="margin-top: 0%;">
+        <h1 class="relationship">Meaningful Relationships</h1>
+        <img
+          class="relationship"
+          src="/images/relationhship.png"
+          alt="shaking hands"
+          width="500"
+          height="400"
+        />
+      </div>
+      <div class="eight wide column">
+        <h1 class="insight">Give & Gain Insight</h1>
+        <img
+          class="insight"
+          src="/images/insight.png"
+          alt="knowing"
+          width="500"
+          height="400"
+        />
+      </div>
+
+      <!-- Be Apart of the Community -->
+      <div class="sixteen wide column" style="margin-top: 2%;">
+        <h1 class="last">Become a part of the Community</h1>
+        <img class="last" src="/images/lastt.png" alt="shake" />
+      </div>
+
+      <!-- <Images of participating liberal arts colleges -->
+      <div
+        class="sixteen wide column"
+        style="margin-top: 0%; margin-bottom: 5%;"
+      >
+        <div class="ui five column grid">
+          <div class="coulumn">
+            <div class="image">
+              <img src="/images/cc-seal.png" width="130" height="130" />
+            </div>
+          </div>
+          <div class="coulumn">
+            <div class="image">
+              <img src="/images/davidsonseal.jpg" width="130" height="130" />
+            </div>
+          </div>
+          <div class="coulumn">
+            <div class="image">
+              <img src="/images/mhc-seal.png" width="130" height="130" />
+            </div>
+          </div>
+          <div class="coulumn">
+            <div class="image">
+              <img src="/images/rc-seal.jpg" width="130" height="130" />
+            </div>
+          </div>
+          <div class="coulumn">
+            <div class="image">
+              <img src="/images/oxy-seal.png" width="130" height="130" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="sixteen wide column" style="margin-top: 5%;">
+        <div class="ui inverted vertical footer segment">
+          <div class="ui container">
+            <div
+              class="ui stackable inverted divided equal height stackable grid"
+            >
+              <div class="seven wide column">
+                <p class="ui inverted header">
+                  Majoredin<img src="/images/logo.png" width="10" height="10" />
+                </p>
+              </div>
+              <div class="three wide column">
+                <h4 class="ui inverted header">General</h4>
+                <div class="ui inverted link list">
+                  <a href="/signup" class="item">Sign Up</a>
+                  <a href="/login" class="item">Log In</a>
+                  <a href="#" class="item">Contact Us</a>
+                  <a href="#" class="item">Terms & Conditions</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
-    integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0="
-    crossorigin="anonymous"
-  ></script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
+      integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

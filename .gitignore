@@ -10,7 +10,11 @@ tmp
 
 # The development sqlite file
 database/development.sqlite
+database/adonis.sqlite
 
 # VSCode & Webstorm history directories
 .history
 .idea
+
+.DS_Store
+
