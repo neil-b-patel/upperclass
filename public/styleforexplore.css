@@ -1,11 +1,23 @@
 #feed {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    padding: 2%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-left: 8%;
+  padding-bottom: 5%;
+}
+
+.image {
+  width: fit-content;
+}
+
+#heading {
+  padding-top: 3%;
+  padding-bottom: 4%;
+  text-align: center;
+  font-size: 35px;
 }
 
 #up {
-    padding: 5%;
+  padding: 5%;
 }
