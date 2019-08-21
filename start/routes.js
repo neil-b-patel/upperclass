@@ -43,11 +43,11 @@ Route.get("/logout", async ({ auth, response }) => {
 Route.on("/about").render("about");
 
 // myprofile page
-// Route.on("/myprofile").render("myprofile");
+Route.get("/myprofile", "ProfileController.show");
 
 // testing routes
 Route.get("/myprofile/create", "StudentController.show");
 Route.post("/myprofile/create", "StudentController.create");
-Route.get("/myprofile", "StudentController.edit");
-Route.post("/myprofile", "StudentController.update");
+Route.get("/myprofile/edit", "StudentController.edit");
+Route.post("/myprofile/edit", "StudentController.update");
 // Route.get("/profile/delete/:id", "TestController.deleteProfile");

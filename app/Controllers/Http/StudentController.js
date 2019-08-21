@@ -2,10 +2,6 @@
 
 class StudentController {
   async show({ view, auth }) {
-    // const studentProfile = await auth.user.student().fetch();
-
-    // console.log({ studentProfile: studentProfile.toJSON() });
-
     return view.render("profile.create");
   }
 
@@ -26,14 +22,22 @@ class StudentController {
       pre_eng: body.pre_eng
     });
 
+    const demographic = await newStudent.demographic().create({
+      gender:body.gender,
+      first_gen:body.first_gen,
+      race: body.race,
+      athlete:body.athlete,
+    })
+
     return response.redirect("/myprofile");
   }
 
   async edit({ request, response, session, params, auth, view }) {    
     const studentProfile = await auth.user.student().fetch();
-
+    const demographic = await studentProfile.demographic().fetch();
+    
     if (studentProfile) {
-      return view.render("profile.edit", { studentProfile });
+      return view.render("profile.edit", { studentProfile , demographic });
     }
 
     return response.redirect("/signup");
@@ -41,13 +45,23 @@ class StudentController {
 
   async update({ request, response, auth }) {
     const studentProfile = await auth.user.student().fetch();
-
+    const demographic = await studentProfile.demographic().fetch();
     const body = request.all();
+
+  
 
     if (studentProfile) {
       studentProfile.first_name = body.first_name;
       studentProfile.last_name = body.last_name;
       studentProfile.year = body.year;
+
+      // demographic.major = body.major;
+      // update does not work for database
+      demographic.gender = body.gender;
+      demographic.race = body.race;
+      demographic.first_gen = body.first_gen;
+      demographic.athlete = body.athlete;
+
       studentProfile.bio = body.bio;
       studentProfile.fun_fact = body.fun_fact;
       studentProfile.abroad = body.abroad;
@@ -57,6 +71,7 @@ class StudentController {
       studentProfile.pre_eng = body.pre_eng;
 
       await studentProfile.save();
+      await demographic.save();
       response.redirect("/myprofile");
     }
   }
