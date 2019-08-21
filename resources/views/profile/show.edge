@@ -1,90 +1,135 @@
-@layout('templates.profiles') 
+@layout('templates.profiles')
+
 @section('body')
+{{ style('//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css') }}
+{{--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">  --}}
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<div class="ui two column doubling stackable grid container">
-  <div class="one wide column"></div>
-  <div class="three wide column">
-    <img class="ui medium circular image" src="../he.png" />
-  </div>
-  <div class="ten wide column">
-    <h1>
-      Insert Name
-    </h1>
-    <h3>
-      Insert College
-      <br />
-      Class of Insert_Year
-    </h3>
-  </div>
-  <div class="five wide column">
-    <table class="ui celled table">
-      <tbody>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 ">
+      <div class="list-group ">
+        <a href="/myprofile" class="list-group-item list-group-item-action">My Profile</a>
+        <a href="/myprofile/edit" class="list-group-item list-group-item-action">Edit Profile</a>
+        <a href="#" class="list-group-item list-group-item-action">Settings</a>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="up" class="ui two column doubling stackable grid container">
+                <div class="four wide column">
 
-        <tr>
-          <td>Pronoun</td>
-          <td>Insert_Pronouns</td>
-        </tr>
-        <tr>
-          <td>First-Gen</td>
-          <td>Insert_isFirst-Gen</td>
-        </tr>
-        <tr>
-          <td>Athlete</td>
-          <td>Insert_isAthlete?</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="eleven wide column">
-    <table class="ui celled table">
-      <thead>
-        <tr>
-          <th>Bio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Insert Bio</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="five wide column"></div>
-  <div class="eleven wide column">
-    <table class="ui celled table">
-      <thead>
-        <tr>
-          <th>Study Abroad</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Insert Study_Abroad</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="five wide column"></div>
-  <div class="eleven wide column">
-    <table class="ui celled table">
-      <thead>
-        <tr>
-          <th>Courses Taken</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul>
-              <li>CSC 121</li>
-              <li>MAT 232</li>
-              <li>REL 232</li>
-              <li>PHI 450</li>
-            <ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+                  <img class="ui medium circular image" src="../he.png" />
+
+                </div>
+                <div class="six wide column">
+                  <h2>
+                      {{ studentProfile.first_name }} {{ studentProfile.last_name }}
+                  </h2>
+                  <h4>
+                    College
+                    <br />
+                    {{ studentProfile.year }}
+                  </h4>
+                </div>
+
+                <div class="five wide column">
+                  <table class="ui celled table">
+                    <tbody>
+                      <tr>
+                        <td>Gender</td>
+                        <td>{{ demographic.gender }}</td>
+                      </tr>
+                      <tr>
+                        <td>Race</td>
+                        <td>{{ demographic.race }}</td>
+                      </tr>
+                      <tr>
+                        <td>First-Gen</td>
+                        <td>{{ demographic.first_gen }}</td>
+                      </tr>
+                      <tr>
+                        <td>Athlete</td>
+                        <td>{{ demographic.athlete }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="sixteen wide column">
+                  <table class="ui celled table">
+                    <tbody>
+                      <tr>
+                        <td>Major</td>
+                        <td>{{ studentProfile.first_name }}</td>
+                      </tr>
+                      <tr>
+                        <td>Study Abroad</td>
+                        <td>{{ studentProfile.abroad }}</td>
+                      </tr>
+                      <tr>
+                        <td>Pre-med</td>
+                        <td>{{ studentProfile.pre_med }}</td>
+                      </tr>
+                      <tr>
+                        <td>Pre-Law</td>
+                        <td>{{ studentProfile.pre_law }}</td>
+                      </tr>
+                      <tr>
+                        <td>Pre-Dent</td>
+                        <td>{{ studentProfile.pre_dent }}</td>
+                      </tr>
+                      <tr>
+                        <td>Pre-Eng</td>
+                        <td>{{ studentProfile.pre_eng }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sixteen wide column">
+                  <table class="ui celled table">
+                    <thead>
+                      <tr>
+                        <th>Bio</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{ studentProfile.bio }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="sixteen wide column">
+                  <table class="ui celled table">
+                    <thead>
+                      <tr>
+                        <th>Fun Fact</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{ studentProfile.fun_fact }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 @endsection

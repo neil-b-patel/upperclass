@@ -25,6 +25,8 @@ class User extends Model {
     return this.hasOne("App/Models/Student");
   }
 
+ 
+
   /**
    * A relationship on tokens is required for auth to
    * work. Since features like `refreshTokens` or

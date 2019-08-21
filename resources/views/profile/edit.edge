@@ -11,7 +11,8 @@
   <div class="row">
     <div class="col-md-3 ">
       <div class="list-group ">
-        <a href="#" class="list-group-item list-group-item-action">Edit Profile</a>
+        <a href="/myprofile" class="list-group-item list-group-item-action">My Profile</a>
+        <a href="/myprofile/edit" class="list-group-item list-group-item-action">Edit Profile</a>
         <a href="#" class="list-group-item list-group-item-action">Settings</a>
       </div>
     </div>
@@ -54,7 +55,7 @@
                 </div>
 
                 <div class="form-group row">
-                  <label for="select" class="col-4 col-form-label">Major?</label>
+                  <label for="select" class="col-4 col-form-label">Major</label>
                   <div class="col-8">
                     <select id="select" name="select" class="custom-select">
                       <option value="cs">Computer Science</option>
@@ -64,17 +65,41 @@
                 </div>
 
                 <div class="form-group row">
-                  <label for="studyAbroad" class="col-4 col-form-label">Study Abroad?</label>
+                    <label for="studyAbroad" class="col-4 col-form-label">Gender</label>
+                    <div class="col-8">
+                      <input id="gender" name="gender" class="form-control here"
+                        type="text" value = "{{ demographic.gender }}">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="studyAbroad" class="col-4 col-form-label">Race</label>
+                      <div class="col-8">
+                        <input id="race" name="race" class="form-control here"
+                           type="text" value = "{{ demographic.race }}">
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="studyAbroad" class="col-4 col-form-label">First-Gen</label>
+                        <div class="col-8">
+                          <input id="first_gen" name="first_gen" class="form-control here"
+                            type="text" value = "{{ demographic.first_gen }}">
+                        </div>
+                      </div>
+
+                <div class="form-group row">
+                  <label for="studyAbroad" class="col-4 col-form-label">Athlete</label>
                   <div class="col-8">
-                    <input id="studyAbroad" name="abroad" placeholder="Spain" class="form-control here"
-                      required="required" type="text" value = "{{ studentProfile.abroad }}">
+                    <input id="athlete" name="athlete" class="form-control here"
+                      type="text" value = "{{ demographic.athlete }}">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <label for="funFact" class="col-4 col-form-label">Fun Fact</label>
                   <div class="col-8">
-                    <input id="funFact" name="fun_fact" placeholder="I like ducks." class="form-control here"
+                    <input id="funFact" name="fun_fact" class="form-control here"
                       type="text" value = "{{ studentProfile.fun_fact }}">
                   </div>
                 </div>
