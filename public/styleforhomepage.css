@@ -11,9 +11,6 @@ body {
   text-align: center;
   color: white;
 }
-.container img {
-  height: 30%;
-}
 .centered {
   position: absolute;
   top: 50%;
