@@ -1,160 +1,134 @@
 @layout('templates.profiles')
 
 @section('body')
-{{ style('//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css') }}
-{{--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">  --}}
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 ">
-      <div class="list-group ">
-        <a href="#" class="list-group-item list-group-item-action">Edit Profile</a>
-        <a href="#" class="list-group-item list-group-item-action">Settings</a>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-12">
-              <h4>My Profile</h4>
-              <hr>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <form action="{{ route('StudentController.create') }}" method="POST">
-                {{ csrfField() }}
+<h4>My Profile</h4>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <form action="{{ route('StudentController.create') }}" method="POST">
+      {{ csrfField() }}
 
-                <div class="form-group row">
-                  <label for="firstName" class="col-4 col-form-label">First Name</label>
-                  <div class="col-8">
-                    <input id="firstName" name="first_name" placeholder="Mary" class="form-control here"
-                      required="required" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="lastName" class="col-4 col-form-label">Last Name</label>
-                  <div class="col-8">
-                    <input id="lastName" name="last_name" placeholder="Sue" class="form-control here"
-                      required="required" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="classYear" class="col-4 col-form-label">Class Year</label>
-                  <div class="col-8">
-                    <input id="classYear" name="year" placeholder="2022" class="form-control here" required="required"
-                      type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="select" class="col-4 col-form-label">Major?</label>
-                  <div class="col-8">
-                    <select id="select" name="select" class="custom-select">
-                      <option value="cs">Computer Science</option>
-                      <option value="phil">Philosophy</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="studyAbroad" class="col-4 col-form-label">Gender</label>
-                    <div class="col-8">
-                      <input id="gender" name="gender" placeholder="you" class="form-control here" type="text">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                      <label for="studyAbroad" class="col-4 col-form-label">race</label>
-                      <div class="col-8">
-                        <input id="race" name="race" placeholder="rbjk" class="form-control here" type="text">
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                        <label for="studyAbroad" class="col-4 col-form-label">First-Gen</label>
-                        <div class="col-8">
-                          <input id="first_gen" name="first_gen" placeholder="jbhkn" class="form-control here"
-                            type="text">
-                        </div>
-                      </div>
-
-                      <div class="form-group row">
-                          <label for="studyAbroad" class="col-4 col-form-label">Athlete</label>
-                          <div class="col-8">
-                            <input id="athlete" name="athlete" placeholder="dcfgvhbj" class="form-control here"
-                              required="required" type="text">
-                          </div>
-                        </div>
-
-                <div class="form-group row">
-                  <label for="studyAbroad" class="col-4 col-form-label">Study Abroad?</label>
-                  <div class="col-8">
-                    <input id="studyAbroad" name="abroad" placeholder="Spain" class="form-control here"
-                      required="required" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="funFact" class="col-4 col-form-label">Fun Fact</label>
-                  <div class="col-8">
-                    <input id="funFact" name="fun_fact" placeholder="I like ducks." class="form-control here"
-                      type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="bio" class="col-4 col-form-label">Biography</label>
-                  <div class="col-8">
-                    <textarea id="bio" name="bio" cols="40" rows="4" class="form-control"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="preLaw" class="col-4 col-form-label">Pre-Law?</label>
-                  <div class="col-8">
-                    <input id="preLaw" name="pre_law" placeholder="N" class="form-control here" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="preMed" class="col-4 col-form-label">Pre-Med?</label>
-                  <div class="col-8">
-                    <input id="preMed" name="pre_med" placeholder="N" class="form-control here" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="preDent" class="col-4 col-form-label">Pre-Dent?</label>
-                  <div class="col-8">
-                    <input id="preDent" name="pre_dent" placeholder="Y" class="form-control here" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="preEng" class="col-4 col-form-label">Pre-Eng?</label>
-                  <div class="col-8">
-                    <input id="preEng" name="pre_eng" placeholder="N" class="form-control here" type="text">
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <div class="offset-4 col-8">
-                    <button name="submit" type="submit" class="btn btn-primary">Create My Profile</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+      <div class="form-group row">
+        <label for="firstName" class="col-4 col-form-label">First Name</label>
+        <div class="col-8">
+          <input id="firstName" name="first_name" placeholder="Mary" class="form-control here" required="required"
+            type="text">
         </div>
       </div>
-    </div>
+
+      <div class="form-group row">
+        <label for="lastName" class="col-4 col-form-label">Last Name</label>
+        <div class="col-8">
+          <input id="lastName" name="last_name" placeholder="Sue" class="form-control here" required="required"
+            type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="classYear" class="col-4 col-form-label">Class Year</label>
+        <div class="col-8">
+          <input id="classYear" name="year" placeholder="2022" class="form-control here" required="required"
+            type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="select" class="col-4 col-form-label">Major?</label>
+        <div class="col-8">
+          <select id="select" name="select" class="custom-select">
+            <option value="cs">Computer Science</option>
+            <option value="phil">Philosophy</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="studyAbroad" class="col-4 col-form-label">Gender</label>
+        <div class="col-8">
+          <input id="gender" name="gender" placeholder="Optional" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="studyAbroad" class="col-4 col-form-label">Race</label>
+        <div class="col-8">
+          <input id="race" name="race" placeholder="Optional" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="studyAbroad" class="col-4 col-form-label">First-Gen</label>
+        <div class="col-8">
+          <input id="first_gen" name="first_gen" placeholder="Optional" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="studyAbroad" class="col-4 col-form-label">Athlete</label>
+        <div class="col-8">
+          <input id="athlete" name="athlete" placeholder="Optional" class="form-control here" required="required"
+            type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="studyAbroad" class="col-4 col-form-label">Study Abroad?</label>
+        <div class="col-8">
+          <input id="studyAbroad" name="abroad" placeholder="Madrid, Spain" class="form-control here" required="required"
+            type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="funFact" class="col-4 col-form-label">Fun Fact</label>
+        <div class="col-8">
+          <input id="funFact" name="fun_fact" placeholder="I like ducks." class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="bio" class="col-4 col-form-label">Biography</label>
+        <div class="col-8">
+          <textarea id="bio" name="bio" cols="40" rows="4" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="preLaw" class="col-4 col-form-label">Pre-Law?</label>
+        <div class="col-8">
+          <input id="preLaw" name="pre_law" placeholder="Y / N" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="preMed" class="col-4 col-form-label">Pre-Med?</label>
+        <div class="col-8">
+          <input id="preMed" name="pre_med" placeholder="Y / N" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="preDent" class="col-4 col-form-label">Pre-Dent?</label>
+        <div class="col-8">
+          <input id="preDent" name="pre_dent" placeholder="Y / N" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="preEng" class="col-4 col-form-label">Pre-Eng?</label>
+        <div class="col-8">
+          <input id="preEng" name="pre_eng" placeholder="Y / N" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-4 col-8">
+          <button name="submit" type="submit" class="btn btn-primary">Create My Profile</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
+
 @endsection

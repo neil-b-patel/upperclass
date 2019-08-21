@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Majoredin - Signup</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
-      integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
-      crossorigin="anonymous"
-    />
-    {{ style('styleforsignup') }}
-  </head>
-  </body>
-  <body>
-    <div class="ui grid">
-      <div class="four wide column">
-        <img class="sign-up" src="/images/sign-up.png" alt="sign-up" />
-      </div>
-      <div class="four wide column"></div>
-      <div class="eight wide column">
-        <div class="ui container" id="box">
-          <form class="ui form" id="fn" action="{{ route('UserController.create') }}" method="POST">
-              {{ csrfField() }}
-            <h2>Welcome to MajoredIn</h2>
 
-            <div class="field">
-              <input type="text" name="username" placeholder="Name" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Majoredin - Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+  {{ style('styleforsignup') }}
+</head>
+</body>
+
+<body>
+  <div class="ui grid">
+    <div class="four wide column">
+      <img class="sign-up" src="/images/sign-up.png" alt="sign-up" />
+    </div>
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <div class="ui container" id="box">
+        <form class="ui form" id="fn" action="{{ route('UserController.create') }}" method="POST">
+          {{ csrfField() }}
+          <h1>Welcome to MajoredIn</h1>
+
+          <br>
+
+          <div class="field">
+            <input type="text" name="username" placeholder="Name" />
+          </div>
+
+          <div class="field">
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div class="field">
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+
+          <br>
+
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" tabindex="0" />
+              <label>I agree to the Terms and Conditions</label>
             </div>
+          </div>
+          <br>
 
-            <div class="field">
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-              />
-            </div>
-
-            <div class="field">
-              <input type="password" name="password" placeholder="Password" />
-            </div>
-
-            <div class="field">
-              <div class="ui checkbox">
-                <input type="checkbox" tabindex="0" class="hidden" />
-                <label>I agree to the Terms and Conditions</label>
-              </div>
-            </div>
-
-            <button class="ui button" type="submit">Sign Up</button>
-            <
-          </form>
-        </div>
+          <button class="ui button" type="submit">Sign Up</button>
+        </form>
       </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
-      integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0="
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
+    integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+</body>
+
 </html>
