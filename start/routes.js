@@ -20,7 +20,7 @@ const Route = use("Route");
 Route.on("/").render("landing");
 
 // explore page
-Route.get("/explore", "ExploreController.index")
+Route.get("/explore", "ExploreController.index");
 
 // profile page
 Route.on("/profile").render("profile.show");
@@ -45,9 +45,16 @@ Route.on("/about").render("about");
 // myprofile page
 Route.get("/myprofile", "ProfileController.show");
 
-// testing routes
+// create a profile
 Route.get("/myprofile/create", "StudentController.show");
 Route.post("/myprofile/create", "StudentController.create");
+
+// edit a profile
 Route.get("/myprofile/edit", "StudentController.edit");
 Route.post("/myprofile/edit", "StudentController.update");
+
+// delete a profile
 // Route.get("/profile/delete/:id", "TestController.deleteProfile");
+
+// course history page
+Route.get("/myprofile/courses", "EnrollmentController.index");
