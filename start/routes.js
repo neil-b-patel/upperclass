@@ -20,7 +20,7 @@ const Route = use("Route");
 Route.on("/").render("landing");
 
 // explore page
-Route.on("/explore").render("explore");
+Route.get("/explore", "ExploreController.index")
 
 // profile page
 Route.on("/profile").render("profile.show");

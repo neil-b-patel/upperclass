@@ -11,24 +11,22 @@
       integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab&display=swap" rel="stylesheet">
     {{ style('styleforlogin') }}
   </head>
   <body>
     <div class="ui middle aligned center aligned grid">
       <div class="column">
         <img class="logo" src="/images/logo.png">
-        <h2 class="ui header">
-          <div class="content">
-            Login to Majoredin
-          </div>
-        </h2>
+        <h1>Login to MajoredIn</h1>
+
         <form class="ui large form" action="{{ route('UserController.login') }}" method="POST">
           {{ csrfField() }}
           <div class="ui stacked segment">
             <div class="field">
               <div class="ui left icon input">
                 <i class="user icon"></i>
-                <input type="email" name="email" placeholder="E-mail" value="{{ old('email', '') }}"/>
+                <input type="email" name="email" placeholder="Email" value="{{ old('email', '') }}"/>
               </div>
             </div>
 
@@ -45,7 +43,7 @@
           <div class="ui error message"></div>
         </form>
         <div class="ui message">
-          Want to Join the majoredIn Community? <a href="/signup">Sign Up</a>
+          Want to Join the MajoredIn Community? <a href="/signup">Sign Up</a>
         </div>
       </div>
     </div>

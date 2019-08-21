@@ -1,15 +1,18 @@
 body {
   height: 100%;
   background-color: #007bff;
+  font-family: "Livvic", sans-serif;
 }
 #box {
   display: flex;
-  width: 80%;
-  padding-top: 4%;
-  padding-bottom: 3%;
+  width: 60%;
+  padding-top: 3%;
+  padding-bottom: 5%;
   justify-content: center;
   background-color: white;
   margin-top: 6%;
+  border: 0px;
+  border-radius: 50px;
 }
 /* * {
         border: red 1px solid;
