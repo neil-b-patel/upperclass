@@ -5,9 +5,7 @@ class CreateUser {
     return {
       username: "required|unique:users",
       email: "required|unique:users",
-      password: "required",
-      college: "required",
-      major:"required"
+      password: "required"
     };
   }
 
