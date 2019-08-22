@@ -9,18 +9,11 @@
 
   <!-- Site Properties -->
   <title>Majoredin</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   {{ style('//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css') }}
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
-    integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
     integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw=" crossorigin="anonymous" />
-
   {{ style('style') }}
   {{ style('styleforexplore') }}
 
@@ -47,11 +40,11 @@
     <a href="/explore" class="item">
       Explore
     </a>
-    <a href="/feed" class="item">
+    <a ref="/feed"class="active item">
       Feed
     </a>
     <div class="right menu">
-      <a href="/myprofile" class="ui active item">
+      <a href="/myprofile" class="ui item">
         My Profile
       </a>
       <a href="/logout" class="ui item">
@@ -64,10 +57,9 @@
       <div class="row">
         <div class="col-md-3 ">
           <div class="list-group ">
-            <a href="/myprofile" class="list-group-item list-group-item-action">My Profile</a>
-            <a href="/myprofile/edit" class="list-group-item list-group-item-action">Edit Profile</a>
-            <a href="/myprofile/courses" class="list-group-item list-group-item-action">Course History</a>
-            <a href="#" class="list-group-item list-group-item-action">Settings</a>
+            <a href="/feed" class="list-group-item list-group-item-action">Posts</a>
+            <a href="/feed/create" class="list-group-item list-group-item-action">Ask a question</a>
+            
           </div>
         </div>
         <div class="col-md-9">
@@ -116,6 +108,11 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
+    integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
 </body>
 
 </html>

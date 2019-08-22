@@ -1,0 +1,27 @@
+@layout('templates.feed')
+
+@section('body')
+
+<h4>Ask a question</h4>
+<hr>
+
+<div class="form-group row">
+        <label for="title" class="col-3 col-form-label">Title</label>
+        <div class="col-8">
+          <input id="title" name="title" class="form-control here" type="text">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="body" class="col-3 col-form-label">Text</label>
+        <div class="col-8">
+          <textarea id="body" name="body" cols="40" rows="10" class="form-control"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group row">
+            <div class="offset-3 col-8">
+              <button name="submit" type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+@endsection

@@ -13,6 +13,8 @@ class StudentController {
       first_name: body.first_name,
       last_name: body.last_name,
       year: body.year,
+      major: body.major,
+      college:body.college,
       bio: body.bio,
       fun_fact: body.fun_fact,
       abroad: body.abroad,
@@ -52,6 +54,8 @@ class StudentController {
       studentProfile.first_name = body.first_name;
       studentProfile.last_name = body.last_name;
       studentProfile.year = body.year;
+      studentProfile.major= body.major;
+      studentProfile.college=body.college;
 
       // demographic.major = body.major;
       // update does not work for database

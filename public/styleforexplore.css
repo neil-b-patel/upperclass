@@ -16,3 +16,11 @@
 #up {
   padding: 5%;
 }
+
+#box{
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom:3%;
+  border-spacing: 10px;
+  border: 1px solid rgb(235, 229, 229);
+}

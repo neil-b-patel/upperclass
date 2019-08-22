@@ -1,214 +1,167 @@
-    <title>Majoredin - Homepage</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
-      integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw="
-      crossorigin="anonymous"
-    />
-    {{ style('styleforhomepage') }}
-    <script>
-        $(document)
-          .ready(function() {
-      
-            // fix menu when passed
-            $('.masthead')
-              .visibility({
-                once: false,
-                onBottomPassed: function() {
-                  $('.fixed.menu').transition('fade in');
-                },
-                onBottomPassedReverse: function() {
-                  $('.fixed.menu').transition('fade out');
-                }
-              })
-            ;
-      
-            // create sidebar and attach to menu open
-            $('.ui.sidebar')
-              .sidebar('attach events', '.toc.item')
-            ;
-      
-          })
-        ;
-        </script>
-  </head>
-  <body>
-    <div class="ui grid">
-      <!-- menu -->
-      <div class="sixteen wide column">
-        <div
-          class="ui inverted vertical masthead center aligned segment"
-          id="one"
-        >
-          <div class="ui container" id="two">
-            <div class="ui large secondary inverted pointing menu">
-              <a href="/" class="item"
-                >Majoredin<img src="/images/logo.png" width="30" height="40"
-              /></a>
-              <div class="right item" >
-                <a href="/login" class="ui inverted button">Log in</a>
-                  <a href="/signup" class="ui inverted button">Sign up</a>
-                </div>
+<head>
+  <title>Majoredin - Homepage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css"
+    integrity="sha256-QVBN0oT74UhpCtEo4Ko+k3sNo+ykJFBBtGduw13V9vw=" crossorigin="anonymous" />
+  {{ style('styleforhomepage') }}
+</head>
+
+<body>
+  <div class="ui grid">
+    <!-- menu -->
+    <div class="sixteen wide column">
+      <div class="ui inverted vertical masthead center aligned segment" id="one">
+        <div class="ui container" id="two">
+          <div class="ui large secondary inverted pointing menu">
+            <a href="/" class="item">Majoredin<img src="/images/logo.png" width="30" height="40" /></a>
+            <div class="right item">
+              <a href="/login" class="ui inverted button">Log in</a>
+              <a href="/signup" class="ui inverted button">Sign up</a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- main image -->
-      <div class="sixteen wide column">
-        <div class="container">
-          <img
-            src="/images/community.jpeg"
-            alt="college students"
-            style="width:100%;"
-          />
-          <div class="centered">
-            <h1>Your Academic Advisor is Not Enough</h1>
-            <h2>You Deserve A Community</h2>
-            <div class="button">
-              <a href="/signup" class="large ui fluid blue button">
-                Join the Majoredin Community
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mission Statement  -->
-      <div class="eight wide column">
-        <h1>Mission Statement</h1>
-        <p>
-          &nbsp;We believe that networking is important, but so is community.
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Why not have both?
-        </p>
-      </div>
-
-      <div class="eight wide column">
-        <img
-          src="/images/connect.png"
-          alt="handshake"
-          width="550"
-          height="500"
-        />
-      </div>
-
-      <!-- How it Works -->
-      <div class="eight wide column" style="margin-top: 0%;">
-        <img
-          class="student"
-          src="/images/last.png"
-          alt="people"
-          width="700"
-          height="650"
-        />
-      </div>
-      <div class="eight wide column" style="margin-top: 0%;">
-        <h1 class="wwd">How it Works</h1>
-        <p class="wwd">
-          Communities are created in liberal arts colleges through students
-          connecting and advising one another along with alumni.
-        </p>
-      </div>
-
-      <!-- Relationships & Insight -->
-      <div class="eight wide column" style="margin-top: 0%;">
-        <h1 class="relationship">Meaningful Relationships</h1>
-        <img
-          class="relationship"
-          src="/images/relationhship.png"
-          alt="shaking hands"
-          width="500"
-          height="400"
-        />
-      </div>
-      <div class="eight wide column">
-        <h1 class="insight">Give & Gain Insight</h1>
-        <img
-          class="insight"
-          src="/images/insight.png"
-          alt="knowing"
-          width="500"
-          height="400"
-        />
-      </div>
-
-      <!-- Be Apart of the Community -->
-      <div class="sixteen wide column" style="margin-top: 2%;">
-        <h1 class="last">Become a part of the Community</h1>
-        <img class="last" src="/images/lastt.png" alt="shake" />
-      </div>
-
-      <!-- <Images of participating liberal arts colleges -->
-      <div
-        class="sixteen wide column"
-        style="margin-top: 0%; margin-bottom: 5%;"
-      >
-        <div class="ui five column grid">
-          <div class="coulumn">
-            <div class="image">
-              <img src="/images/cc-seal.png" width="130" height="130" />
-            </div>
-          </div>
-          <div class="coulumn">
-            <div class="image">
-              <img src="/images/davidsonseal.jpg" width="130" height="130" />
-            </div>
-          </div>
-          <div class="coulumn">
-            <div class="image">
-              <img src="/images/mhc-seal.png" width="130" height="130" />
-            </div>
-          </div>
-          <div class="coulumn">
-            <div class="image">
-              <img src="/images/rc-seal.jpg" width="130" height="130" />
-            </div>
-          </div>
-          <div class="coulumn">
-            <div class="image">
-              <img src="/images/oxy-seal.png" width="130" height="130" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer -->
-      <div class="sixteen wide column" style="margin-top: 5%;">
-        <div class="ui inverted vertical footer segment">
-          <div class="ui container">
-            <div
-              class="ui stackable inverted divided equal height stackable grid"
-            >
-              <div class="seven wide column">
-                <a href="#"></a>
-                <p class="ui inverted header">
-                  Majoredin<img src="/images/logo.png" width="10" height="10" />
-                </p>
-              </div>
-              <div class="three wide column">
-                <h4 class="ui inverted header">General</h4>
-                <div class="ui inverted link list">
-                  <a href="/signup" class="item">Sign Up</a>
-                  <a href="/login" class="item">Log In</a>
-                  <a href="#" class="item">Home</a>
-                  <a href="#" class="item">Contact Us</a>
-                  <a href="#" class="item">Terms & Conditions</a>
-                </div>
-              </div>
-            </div>
-          </div> 
         </div>
       </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
-      integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0="
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+  </div>
+
+  <!-- main image -->
+  <div class="sixteen wide column">
+    <div class="container">
+      <img src="/images/community.jpeg" alt="college students" style="width:100%;" />
+      <div class="centered">
+        <h1>Your Academic Advisor is Not Enough</h1>
+        <h2>You Deserve A Community</h2>
+        <div class="button">
+          <a href="/signup" class="large ui fluid blue button">
+            Join the Majoredin Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission Statement  -->
+  <div class="eight wide column">
+    <h1>Mission Statement</h1>
+    <p>
+      &nbsp;We believe that networking is important, but so is community.
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Why not have both?
+    </p>
+  </div>
+
+  <div class="eight wide column">
+    <img src="/images/connect.png" alt="handshake" width="550" height="500" />
+  </div>
+
+  <!-- How it Works -->
+  <div class="eight wide column" style="margin-top: 0%;">
+    <img class="student" src="/images/last.png" alt="people" width="700" height="650" />
+  </div>
+  <div class="eight wide column" style="margin-top: 0%;">
+    <h1 class="wwd">How it Works</h1>
+    <p class="wwd">
+      Communities are created in liberal arts colleges through students
+      connecting and advising one another along with alumni.
+    </p>
+  </div>
+
+  <!-- Relationships & Insight -->
+  <div class="eight wide column" style="margin-top: 0%;">
+    <h1 class="relationship">Meaningful Relationships</h1>
+    <img class="relationship" src="/images/relationhship.png" alt="shaking hands" width="500" height="400" />
+  </div>
+  <div class="eight wide column">
+    <h1 class="insight">Give & Gain Insight</h1>
+    <img class="insight" src="/images/insight.png" alt="knowing" width="500" height="400" />
+  </div>
+
+  <!-- Be Apart of the Community -->
+  <div class="sixteen wide column" style="margin-top: 2%;">
+    <h1 class="last">Become a part of the Community</h1>
+    <img class="last" src="/images/lastt.png" alt="shake" />
+  </div>
+
+  <!-- <Images of participating liberal arts colleges -->
+  <div class="sixteen wide column" style="margin-top: 0%; margin-bottom: 5%;">
+    <div class="ui five column grid">
+      <div class="coulumn">
+        <div class="image">
+          <img src="/images/cc-seal.png" width="130" height="130" />
+        </div>
+      </div>
+      <div class="coulumn">
+        <div class="image">
+          <img src="/images/davidsonseal.jpg" width="130" height="130" />
+        </div>
+      </div>
+      <div class="coulumn">
+        <div class="image">
+          <img src="/images/mhc-seal.png" width="130" height="130" />
+        </div>
+      </div>
+      <div class="coulumn">
+        <div class="image">
+          <img src="/images/rc-seal.jpg" width="130" height="130" />
+        </div>
+      </div>
+      <div class="coulumn">
+        <div class="image">
+          <img src="/images/oxy-seal.png" width="130" height="130" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <<<<<<< HEAD <!-- footer -->
+    <div class="sixteen wide column" style="margin-top: 5%;">
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="seven wide column">
+              <a href="#"></a>
+              <p class="ui inverted header">
+                Majoredin<img src="/images/logo.png" width="10" height="10" />
+              </p>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">General</h4>
+              <div class="ui inverted link list">
+                <a href="/signup" class="item">Sign Up</a>
+                <a href="/login" class="item">Log In</a>
+                <a href="#" class="item">Home</a>
+                <a href="#" class="item">Contact Us</a>
+                <a href="#" class="item">Terms & Conditions</a>
+                =======
+                <!-- footer -->
+                <div class="sixteen wide column" style="margin-top: 5%;">
+                  <div class="ui inverted vertical footer segment">
+                    <div class="ui container">
+                      <div class="ui stackable inverted divided equal height stackable grid">
+                        <div class="seven wide column">
+                          <a href="#"></a>
+                          <p class="ui inverted header">
+                            Majoredin<img src="/images/logo.png" width="10" height="10" />
+                          </p>
+                        </div>
+                        <div class="three wide column">
+                          <h4 class="ui inverted header">General</h4>
+                          <div class="ui inverted link list">
+                            <a href="/signup" class="item">Sign Up</a>
+                            <a href="/login" class="item">Log In</a>
+                            <a href="#" class="item">Home</a>
+                            <a href="#" class="item">Contact Us</a>
+                            <a href="#" class="item">Terms & Conditions</a>
+                          </div>
+                        </div>
+                        >>>>>>> master
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"
+            integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+</body>

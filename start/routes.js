@@ -42,6 +42,10 @@ Route.get("/logout", async ({ auth, response }) => {
 // about page
 Route.on("/about").render("about");
 
+
+Route.on("/feed").render("feed.show");
+Route.on("/feed/create").render("feed.create");
+
 // myprofile page
 Route.get("/myprofile", "ProfileController.show");
 
