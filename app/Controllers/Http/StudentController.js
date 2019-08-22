@@ -23,21 +23,21 @@ class StudentController {
     });
 
     const demographic = await newStudent.demographic().create({
-      gender:body.gender,
-      first_gen:body.first_gen,
+      gender: body.gender,
+      first_gen: body.first_gen,
       race: body.race,
-      athlete:body.athlete,
-    })
+      athlete: body.athlete
+    });
 
     return response.redirect("/myprofile");
   }
 
-  async edit({ request, response, session, params, auth, view }) {    
+  async edit({ request, response, session, params, auth, view }) {
     const studentProfile = await auth.user.student().fetch();
     const demographic = await studentProfile.demographic().fetch();
-    
+
     if (studentProfile) {
-      return view.render("profile.edit", { studentProfile , demographic });
+      return view.render("profile.edit", { studentProfile, demographic });
     }
 
     return response.redirect("/signup");
@@ -47,8 +47,6 @@ class StudentController {
     const studentProfile = await auth.user.student().fetch();
     const demographic = await studentProfile.demographic().fetch();
     const body = request.all();
-
-  
 
     if (studentProfile) {
       studentProfile.first_name = body.first_name;

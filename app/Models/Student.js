@@ -8,6 +8,10 @@ class Student extends Model {
     return this.hasOne("App/Models/Demographic");
   }
 
+  enrollment() {
+    return this.hasMany("App/Models/Enrollment");
+  }
+
   /**
    * A relationship on tokens is required for auth to
    * work. Since features like `refreshTokens` or
@@ -21,7 +25,6 @@ class Student extends Model {
   tokens() {
     return this.hasMany("App/Models/Token");
   }
-  
 }
 
 module.exports = Student;

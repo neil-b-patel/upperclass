@@ -1,12 +1,14 @@
 "use strict";
 
-const Enrollment = use("App/Models/Enrollment");
-
 class EnrollmentController {
-  async index({ view }) {
-    const classes = await Enrollment.all();
+  async index({ view, auth}) {
+    const studentProfile = await auth.user.student().fetch();
+    const classes = await studentProfile.enrollment().fetch();
 
-    return view.render("profile.courses.index", { classes: classes.toJSON() });
+    return view.render("profile.courses.index", {
+      studentProfile: studentProfile.toJSON(),
+      classes: classes.toJSON()
+    });
   }
 }
 

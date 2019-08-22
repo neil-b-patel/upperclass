@@ -37,23 +37,24 @@
   <div class="ui container" id="feed">
     <div class="ui link cards">
 
-      {{--  test card  --}}
+    @each(student in profiles)
+      @unless(myProfile === student.user_id)
       <div class="card">
-        <a class="image" href="/profile">
+        <div class="image">
           <img src="../he.png" />
-        </a>
+        </div>
         <div class="content">
-          <div class="header"> {{ studentProfiles[0].first_name }} {{ studentProfiles[0].last_name }} </div>
+          <div class="header"> {{ student.first_name }} {{ student.last_name }} </div>
           <div class="meta">
             <a>Insert_Majors</a>
           </div>
           <div class="description">
-            {{ studentProfiles[0].fun_fact }}
+            {{ student.fun_fact }}
           </div>
         </div>
         <div class="extra content">
           <span class="right floated">
-            Class of {{ studentProfiles[0].year }}
+            Class of {{ student.year }}
           </span>
           <span>
             <i class="user icon"></i>
@@ -61,131 +62,9 @@
           </span>
         </div>
       </div>
+      @endunless
+    @endeach
 
-      {{--  test card  --}}
-      <div class="card">
-        <a class="image" href="/profile">
-          <img src="../he.png" />
-        </a>
-        <div class="content">
-          <div class="header"> {{ studentProfiles[1].first_name }} {{ studentProfiles[1].last_name }} </div>
-          <div class="meta">
-            <a>Insert_Majors</a>
-          </div>
-          <div class="description">
-            {{ studentProfiles[1].fun_fact }}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            Class of {{ studentProfiles[1].year }}
-          </span>
-          <span>
-            <i class="user icon"></i>
-            0
-          </span>
-        </div>
-      </div>
-
-      {{--  test card  --}}
-      <div class="card">
-        <a class="image" href="/profile">
-          <img src="../he.png" />
-        </a>
-        <div class="content">
-          <div class="header"> {{ studentProfiles[2].first_name }} {{ studentProfiles[2].last_name }} </div>
-          <div class="meta">
-            <a>Insert_Majors</a>
-          </div>
-          <div class="description">
-            {{ studentProfiles[2].fun_fact }}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            Class of {{ studentProfiles[2].year }}
-          </span>
-          <span>
-            <i class="user icon"></i>
-            0
-          </span>
-        </div>
-      </div>
-
-      {{--  test card  --}}
-      <div class="card">
-        <a class="image" href="/profile">
-          <img src="../he.png" />
-        </a>
-        <div class="content">
-          <div class="header"> {{ studentProfiles[3].first_name }} {{ studentProfiles[3].last_name }} </div>
-          <div class="meta">
-            <a>Insert_Majors</a>
-          </div>
-          <div class="description">
-            {{ studentProfiles[3].fun_fact }}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            Class of {{ studentProfiles[3].year }}
-          </span>
-          <span>
-            <i class="user icon"></i>
-            0
-          </span>
-        </div>
-      </div>
-
-      {{--  test card  --}}
-      <div class="card">
-        <a class="image" href="/profile">
-          <img src="../he.png" />
-        </a>
-        <div class="content">
-          <div class="header"> {{ studentProfiles[4].first_name }} {{ studentProfiles[4].last_name }} </div>
-          <div class="meta">
-            <a>Insert_Majors</a>
-          </div>
-          <div class="description">
-            {{ studentProfiles[4].fun_fact }}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            Class of {{ studentProfiles[4].year }}
-          </span>
-          <span>
-            <i class="user icon"></i>
-            0
-          </span>
-        </div>
-      </div>
-
-      {{--  test card  --}}
-      <div class="card">
-        <a class="image" href="/profile">
-          <img src="../he.png" />
-        </a>
-        <div class="content">
-          <div class="header"> {{ studentProfiles[5].first_name }} {{ studentProfiles[5].last_name }} </div>
-          <div class="meta">
-            <a>Insert_Majors</a>
-          </div>
-          <div class="description">
-            {{ studentProfiles[5].fun_fact }}
-          </div>
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            Class of {{ studentProfiles[5].year }}
-          </span>
-          <span>
-            <i class="user icon"></i>
-            0
-          </span>
-        </div>
-      </div>
     </div>
   </div>
 
