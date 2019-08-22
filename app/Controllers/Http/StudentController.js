@@ -57,8 +57,6 @@ class StudentController {
       studentProfile.major= body.major;
       studentProfile.college=body.college;
 
-      // demographic.major = body.major;
-      // update does not work for database
       demographic.gender = body.gender;
       demographic.race = body.race;
       demographic.first_gen = body.first_gen;

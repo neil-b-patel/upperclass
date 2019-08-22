@@ -8,8 +8,11 @@ class EnrollmentsSchema extends Schema {
     this.create('enrollments', (table) => {
       table.increments();
       table.integer("student_id");
-      table.integer("classes_departments_id");
+      table.string("department")
+      table.string("CRN")
+      table.string("name")
       table.integer("semester_taken");
+      table.string("professor")
       table.timestamps();
     })
   }

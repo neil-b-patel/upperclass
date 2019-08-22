@@ -9,15 +9,19 @@
     <!-- menu -->
     <div class="sixteen wide column">
       <div class="ui secondary menu" id="menu">
-        <a href="/" id="logo" class="item"><img src="/images/logo.png"/>
+        <a href="/" id="logo" class="item"><img src="/images/logo.png" />
           <b> &nbsp; MajoredIn </b>
         </a>
 
         <div class="right menu">
           <div class="item">
-            <a href="/login" class="ui primary button" id="button">Log in</a>
+            @unless( myProfile )
+              <a href="/login" class="ui primary button" id="button">Log In</a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/signup" class="ui primary button">Sign up</a>
+              <a href="/signup" class="ui primary button">Sign Up</a>
+            @else
+              <a href="/logout" class="ui primary button">Log Out</a>
+            @endunless
           </div>
         </div>
       </div>
@@ -25,7 +29,7 @@
     <!-- main image -->
     <div class="sixteen wide column">
       <div class="container">
-        <img id="banner" src="/images/community.jpeg" alt="college students"/>
+        <img id="banner" src="/images/community.jpeg" alt="college students" />
         <div class="centered">
           <h1>Your Academic Advisor is Not Enough</h1>
           <h2>You Deserve A Community</h2>
