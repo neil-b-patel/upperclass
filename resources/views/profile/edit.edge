@@ -26,13 +26,13 @@
       </div>
 
       <div class="form-group row">
-          <label for="college" class="col-4 col-form-label">College</label>
-          <div class="col-8">
-            <input id="college" name="college" class="form-control here" required="required" type="text"
-              value="{{ studentProfile.college }}">
-          </div>
+        <label for="college" class="col-4 col-form-label">College</label>
+        <div class="col-8">
+          <input id="college" name="college" class="form-control here" required="required" type="text"
+            value="{{ studentProfile.college }}">
         </div>
-  
+      </div>
+
 
       <div class="form-group row">
         <label for="classYear" class="col-4 col-form-label">Class Year</label>
@@ -43,12 +43,12 @@
       </div>
 
       <div class="form-group row">
-          <label for="major" class="col-4 col-form-label">Major</label>
-          <div class="col-8">
-            <input id="major" name="major" class="form-control here" required="required" type="text"
-              value="{{ studentProfile.major }}">
-          </div>
+        <label for="major" class="col-4 col-form-label">Major</label>
+        <div class="col-8">
+          <input id="major" name="major" class="form-control here" required="required" type="text"
+            value="{{ studentProfile.major }}">
         </div>
+      </div>
 
       <div class="form-group row">
         <label for="studyAbroad" class="col-4 col-form-label">Gender</label>
@@ -98,29 +98,52 @@
       <div class="form-group row">
         <label for="preLaw" class="col-4 col-form-label">Pre-Law?</label>
         <div class="col-8">
-          <input id="preLaw" name="pre_law" class="form-control here" type="text" value="{{ studentProfile.pre_law }}">
+          @if( studentProfile.pre_law === 'No' )
+            <input type="radio" name="pre_law" value="No" checked> No &nbsp;
+            <input type="radio" name="pre_law" value="Yes"> Yes <br>
+          @else
+            <input type="radio" name="pre_law" value="No" > No &nbsp;
+            <input type="radio" name="pre_law" value="Yes" checked> Yes <br>
+          @endif
         </div>
       </div>
 
       <div class="form-group row">
         <label for="preMed" class="col-4 col-form-label">Pre-Medical?</label>
         <div class="col-8">
-          <input id="preMed" name="pre_med" class="form-control here" type="text" value="{{ studentProfile.pre_med }}">
+          @if( studentProfile.pre_med === 'No' )
+            <input type="radio" name="pre_med" value="No" checked> No &nbsp;
+            <input type="radio" name="pre_med" value="Yes"> Yes <br>
+          @else
+            <input type="radio" name="pre_med" value="No" > No &nbsp;
+            <input type="radio" name="pre_med" value="Yes" checked> Yes <br>
+          @endif
         </div>
       </div>
 
       <div class="form-group row">
         <label for="preDent" class="col-4 col-form-label">Pre-Dental?</label>
         <div class="col-8">
-          <input id="preDent" name="pre_dent" class="form-control here" type="text"
-            value="{{ studentProfile.pre_dent }}">
+            @if( studentProfile.pre_dent === 'No' )
+            <input type="radio" name="pre_dent" value="No" checked> No &nbsp;
+            <input type="radio" name="pre_dent" value="Yes"> Yes <br>
+          @else
+            <input type="radio" name="pre_dent" value="No" > No &nbsp;
+            <input type="radio" name="pre_dent" value="Yes" checked> Yes <br>
+          @endif
         </div>
       </div>
 
       <div class="form-group row">
         <label for="preEng" class="col-4 col-form-label">Pre-Engineering?</label>
         <div class="col-8">
-          <input id="preEng" name="pre_eng" class="form-control here" type="text" value="{{ studentProfile.pre_eng }}">
+            @if( studentProfile.pre_eng === 'No' )
+            <input type="radio" name="pre_eng" value="No" checked> No &nbsp;
+            <input type="radio" name="pre_eng" value="Yes"> Yes <br>
+          @else
+            <input type="radio" name="pre_eng" value="No" > No &nbsp;
+            <input type="radio" name="pre_eng" value="Yes" checked> Yes <br>
+          @endif
         </div>
       </div>
 

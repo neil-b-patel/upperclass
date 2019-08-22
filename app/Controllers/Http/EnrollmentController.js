@@ -42,7 +42,7 @@ class EnrollmentController {
     const enrollment = await studentProfile.enrollment().fetch();
     const body = request.all();
 
-    console.log(enrollment);
+    // console.log(enrollment);
 
     if (studentProfile) {
       if (enrollment) {

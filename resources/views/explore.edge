@@ -21,7 +21,7 @@
     <a href="/explore" class="active item">
       Explore
     </a>
-    <a href="/feed"class="item">
+    <a href="/feed" class="item">
       Feed
     </a>
     <div class="right menu">
@@ -34,12 +34,12 @@
     </div>
   </div>
   <div id="heading"><b>Connect with your Community</b></div>
-  <div class="ui container" id="feed">
-    <div class="ui link cards">
+  <div class="ui container">
+    <div class="ui link cards" id="cards">
 
-    @each(student in profiles)
+      @each(student in profiles)
       @unless(myProfile === student.user_id)
-      <div class="card">
+      <div class="card" style="margin-left:2%;margin-right:2%;margin-bottom:2%">
         <div class="image">
           <img src="../he.png" />
         </div>
@@ -63,7 +63,7 @@
         </div>
       </div>
       @endunless
-    @endeach
+      @endeach
 
     </div>
   </div>
@@ -79,12 +79,20 @@
             </p>
           </div>
           <div class="five wide column">
-              <h4 class="ui inverted header">Created by:</h4>
-              <div><p>  Neil Patel </p></div>
-              <div><p>  Sohee Kim </p></div>
-              <div><p>  Jorge Madrigal Adan </p></div>
-              <div><p>  Annie Sadler </p></div>
+            <h4 class="ui inverted header">Created by:</h4>
+            <div>
+              <p> Neil Patel </p>
             </div>
+            <div>
+              <p> Sohee Kim </p>
+            </div>
+            <div>
+              <p> Jorge Madrigal Adan </p>
+            </div>
+            <div>
+              <p> Annie Sadler </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
