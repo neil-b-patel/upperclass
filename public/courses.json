@@ -1,0 +1,162 @@
+{
+  "enrollment_data": {
+    "Classes": [
+      {
+        "department": "AFR",
+        "CRN": 282,
+        "name": "African American Literature: 18th - 19th Century"
+      },
+      {
+        "department": "AFR",
+        "CRN": 286,
+        "name": "African American Literature: 1900-"
+      },
+      {
+        "department": "AFR",
+        "CRN": 292,
+        "name": "“Fake News,” Journalism and Ethics"
+      },
+      {
+        "department": "AFR",
+        "CRN": 297,
+        "name": "Caribbean Literature (=ENG 297)"
+      },
+      {
+        "department": "AFR",
+        "CRN": 298,
+        "name": "Race and American Journalism"
+      },
+      {
+        "department": "AFR",
+        "CRN": 303,
+        "name": "Major Thinkers in Africana Studies: W.E.B. Du Bois (=ENG 382)"
+      },
+      {
+        "department": "AFR",
+        "CRN": 383,
+        "name": "Black Literary Theory (=ENG 483)"
+      },
+      {
+        "department": "CHI",
+        "CRN": 405,
+        "name": "Chinese Cinema & Modern Literature (in translation)"
+      },
+      {
+        "department": "CLA",
+        "CRN": 121,
+        "name": "Greek Literature in Translation"
+      },
+      {
+        "department": "CLA",
+        "CRN": 122,
+        "name": "Roman Literature in Translation"
+      },
+      { "department": "DIG", "CRN": 220, "name": "Electronic Literature" },
+      {
+        "department": "ENG",
+        "CRN": 110,
+        "name": "Course list for Introduction to Literature"
+      },
+      {
+        "department": "ENG",
+        "CRN": 115,
+        "name": "The Art, Science, and Fascination of Fragrance"
+      },
+      { "department": "ENG", "CRN": 116, "name": "Gesture" },
+      {
+        "department": "ENG",
+        "CRN": 202,
+        "name": "Introduction to Creative Writing"
+      },
+      {
+        "department": "ENG",
+        "CRN": 203,
+        "name": "Introduction to Writing Poetry"
+      },
+      {
+        "department": "ENG",
+        "CRN": 205,
+        "name": "Introduction to Screenwriting"
+      },
+      { "department": "ENG", "CRN": 211, "name": "Filmmaking" },
+      { "department": "ENG", "CRN": 220, "name": "Literary Analysis" },
+      { "department": "ENG", "CRN": 240, "name": "British Literature to 1800" },
+      {
+        "department": "ENG",
+        "CRN": 242,
+        "name": "Women’s Work: 21st Century Female Playwrights (=THE 242)"
+      },
+      { "department": "ENG", "CRN": 245, "name": "Creating Book Culture" },
+      {
+        "department": "ENG",
+        "CRN": 260,
+        "name": "British Literature since 1800"
+      },
+      { "department": "ENG", "CRN": 261, "name": "Modern Drama" },
+      {
+        "department": "ENG",
+        "CRN": 262,
+        "name": "Bodies at Risk in American Drama"
+      },
+      {
+        "department": "ENG",
+        "CRN": 271,
+        "name": "Disability in Literature and Art"
+      },
+      {
+        "department": "ENG",
+        "CRN": 280,
+        "name": "American Literature to 2000"
+      },
+      {
+        "department": "ENG",
+        "CRN": 282,
+        "name": "African American Literature: 18th - 19th Century (=AFR 282)"
+      },
+      { "department": "ENG", "CRN": 283, "name": "Short Prose Fiction" },
+      { "department": "ENG", "CRN": 284, "name": "African American Drama" },
+      {
+        "department": "ENG",
+        "CRN": 285,
+        "name": "Politics & Performance: 20th Century Theatre (=THE 285)"
+      },
+      {
+        "department": "ENG",
+        "CRN": 286,
+        "name": "African-American Literature: 1900- (=AFR 286)"
+      },
+      {
+        "department": "ENG",
+        "CRN": 288,
+        "name": "Contemporary American Multicultural Drama"
+      },
+      { "department": "ENG", "CRN": 289, "name": "Environmental Literature" },
+      { "department": "ENG", "CRN": 290, "name": "World Literatures" },
+      { "department": "ENG", "CRN": 291, "name": "Literary Mysteries" },
+      {
+        "department": "ENG",
+        "CRN": 292,
+        "name": "Documentary Film - History, Theory, and Production of Documentary"
+      },
+      { "department": "ENG", "CRN": 293, "name": "Film as Narrative Art" },
+      { "department": "ENG", "CRN": 294, "name": "Harlem Renaissance" },
+      { "department": "ENG", "CRN": 295, "name": "Women Writers" },
+      {
+        "department": "ENG",
+        "CRN": 297,
+        "name": "Caribbean Literature (=AFR 297)"
+      },
+      { "department": "ENG", "CRN": 301, "name": "Writing Nonfiction Prose" },
+      { "department": "ENG", "CRN": 303, "name": "Advanced Poetry Writing" },
+      { "department": "ENG", "CRN": 304, "name": "Advanced Fiction Writing" },
+      { "department": "ENG", "CRN": 306, "name": "Digital Design" },
+      { "department": "ENG", "CRN": 307, "name": "Forms of Fiction" },
+      {
+        "department": "ENG",
+        "CRN": 308,
+        "name": "Time & Space in Creative Nonfiction"
+      },
+      { "department": "ENG", "CRN": 310, "name": "The English Language" }
+    ]
+  }
+}

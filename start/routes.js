@@ -17,7 +17,7 @@
 const Route = use("Route");
 
 // landing page
-Route.on("/").render("landing");
+Route.get("/", "LandingController.index");
 
 // explore page
 Route.get("/explore", "ExploreController.index");
@@ -61,4 +61,7 @@ Route.post("/myprofile/edit", "StudentController.update");
 // Route.get("/profile/delete/:id", "TestController.deleteProfile");
 
 // course history page
-Route.get("/myprofile/courses", "EnrollmentController.index");
+Route.get("/myprofile/courses/add", "EnrollmentController.index");
+Route.post("/myprofile/courses/add", "EnrollmentController.create");
+Route.get("/myprofile/courses", "EnrollmentController.edit")
+Route.post("/myprofile/courses", "EnrollmentController.update");
