@@ -13,9 +13,11 @@
       {{ studentProfile.first_name }} {{ studentProfile.last_name }}
     </h2>
     <h4>
-      College
+      {{ studentProfile.college }}
       <br />
-      {{ studentProfile.year }}
+      {{ studentProfile.major }} Major
+      <br />
+      Class of {{ studentProfile.year }}
     </h4>
   </div>
 
@@ -31,11 +33,11 @@
           <td>{{ demographic.race }}</td>
         </tr>
         <tr>
-          <td>First-Gen</td>
+          <td>First-Gen?</td>
           <td>{{ demographic.first_gen }}</td>
         </tr>
         <tr>
-          <td>Athlete</td>
+          <td>Athlete?</td>
           <td>{{ demographic.athlete }}</td>
         </tr>
       </tbody>
