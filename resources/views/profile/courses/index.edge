@@ -1,106 +1,46 @@
 @layout('templates.profiles')
-
+@section('head')
+<script src="classes.js"></script>
+@endsection
 @section('body')
 
 <div id="up" class="ui two column doubling stackable grid container">
-  <div class="four wide column">
+    <div class="four wide column">
 
-    <img class="ui medium circular image" src="../he.png" />
+        <img class="ui medium circular image" src="../he.png" />
 
-  </div>
-  <div class="six wide column">
-    <h2>
-      {{ studentProfile.first_name }} {{ studentProfile.last_name }}
-    </h2>
-    <h4>
-      College
-      <br />
-      {{ studentProfile.year }}
-    </h4>
-  </div>
+    </div>
+    <div class="six wide column">
+        <h2>
+            {{ studentProfile.first_name }} {{ studentProfile.last_name }}
+        </h2>
+        <h4>
+            {{ studentProfile }}
+            <br />
+            Class of {{ studentProfile.year }}
+        </h4>
+    </div>
 
-  <div class="five wide column">
-    <table class="ui celled table">
-      <tbody>
-        <tr>
-          <td>Gender</td>
-          <td>{{ demographic.gender }}</td>
-        </tr>
-        <tr>
-          <td>Race</td>
-          <td>{{ demographic.race }}</td>
-        </tr>
-        <tr>
-          <td>First-Gen</td>
-          <td>{{ demographic.first_gen }}</td>
-        </tr>
-        <tr>
-          <td>Athlete</td>
-          <td>{{ demographic.athlete }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="sixteen wide column">
-    <table class="ui celled table">
-      <tbody>
-        <tr>
-          <td>Major</td>
-          <td>{{ studentProfile.first_name }}</td>
-        </tr>
-        <tr>
-          <td>Study Abroad</td>
-          <td>{{ studentProfile.abroad }}</td>
-        </tr>
-        <tr>
-          <td>Pre-Law?</td>
-          <td>{{ studentProfile.pre_law }}</td>
-        </tr>
-        <tr>
-          <td>Pre-Medical?</td>
-          <td>{{ studentProfile.pre_med }}</td>
-        </tr>
-        <tr>
-          <td>Pre-Dental?</td>
-          <td>{{ studentProfile.pre_dent }}</td>
-        </tr>
-        <tr>
-          <td>Pre-Engineering?</td>
-          <td>{{ studentProfile.pre_eng }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="sixteen wide column">
-    <table class="ui celled table">
-      <thead>
-        <tr>
-          <th>Bio</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ studentProfile.bio }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="sixteen wide column">
-    <table class="ui celled table">
-      <thead>
-        <tr>
-          <th>Fun Fact</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ studentProfile.fun_fact }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="sixteen wide column">
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Class Name</th>
+                    <th>Semester Taken</th>
+                    <th>Professor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ enrollment[0].department }}</td>
+                    <td>{{ enrollment[0].name }}</td>
+                    <td>{{ enrollment[0].semester_taken }}</td>
+                    <td>{{ enrollment[0].professor }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 @endsection

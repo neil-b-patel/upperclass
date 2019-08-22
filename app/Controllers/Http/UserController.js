@@ -7,11 +7,10 @@ class UserController {
     const user = await User.create( 
       request.only(["username", "email", "password"])
     );
-
+    console.log(await request.all())
     await auth.login(user);
     return response.redirect("/myprofile/create");
   }
-
   async login({ request, auth, response, session }) {
     const { email, password } = request.all();
 

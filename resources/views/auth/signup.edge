@@ -27,24 +27,21 @@
       <div class="ui container" id="box">
         <form class="ui form" id="fn" action="{{ route('UserController.create') }}" method="POST">
           {{ csrfField() }}
-          <h1>Welcome to MajoredIn</h1>
-
+          <h1>Welcome to Majoredin</h1>
           <br>
-
+          <label>Username</label>
           <div class="field">
-            <input type="text" name="username" placeholder="Name" />
+            <input type="text" name="username" placeholder="marysue01"/>
           </div>
-
+          <label> E-mail</label>
           <div class="field">
-            <input type="email" name="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="marysue@organization.edu"/>
           </div>
-
+          <label>Password</label>
           <div class="field">
-            <input type="password" name="password" placeholder="Password" />
+            <input type="password" name="password" placeholder="Must be at least 6 characters."/>
           </div>
-        
           <br>
-
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" tabindex="0" />
