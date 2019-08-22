@@ -11,6 +11,8 @@ class StudentsSchema extends Schema {
       table.string("first_name");
       table.string("last_name");
       table.integer("year");
+      table.string("major");
+      table.string("college");
       table.string("abroad");
       table.string("fun_fact");
       table.string("bio");
