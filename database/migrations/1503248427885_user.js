@@ -17,6 +17,8 @@ class UserSchema extends Schema {
         .unique();
       table.string("password", 60).notNullable();
       table.timestamps();
+      table.string("college",80).notNullable();
+      table.string("major", 80).notNullable();
     });
   }
 
