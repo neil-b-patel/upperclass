@@ -1,6 +1,7 @@
 body {
   font-family: -apple-system, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    height: 100%;
 }
 .container {
   position: relative;
@@ -42,14 +43,15 @@ body {
   transform: translate(-50%, -50%);
   padding-bottom: 5%;
 }
-.eight.wide.column h1.second-text {
+.eight.wide.column h2.second-text {
   display: table;
   font-size: 3.2em;
   font-weight: bold;
   position: absolute;
   top: 45%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  /* left: 60%; */
+  right: 180;
+  /* transform: translate(-50%, -50%); */
   padding-bottom: 5%;
 }
 .ui.large.secondary.inverted.pointing.menu a.item {
@@ -86,12 +88,12 @@ body {
   display: table;
   font-size: 3.2em;
   font-weight: bold;
-  position: absolute;
-  top: 30%;
-  left: 75%;
-  padding-right: 50%;
+  /* position: absolute; */
+  top: 0%;
+  /* left: 75%; */
+  /* padding-right: 50%; */
   transform: translate(-50%, -50%);
-  margin-bottom: 0%;
+  /* margin-bottom: 0%; */
 }
 .eight.wide.column p.wwd {
   font-weight: lighter;
@@ -103,7 +105,7 @@ body {
   padding-top: 6%;
   padding-bottom: 0%;
   margin-bottom: 0%;
-  display: table;
+  display: contents;
 }
 .ui.five.column.grid {
   display: flexbox;
@@ -146,7 +148,7 @@ body {
   padding-right: 5%;
   padding-top: 1%;
 }
-#banner {
+#landimage {
   width: 100%;
   height: 110%;
 }
@@ -155,4 +157,27 @@ body {
 }
 #signupButton {
   font-size: 1.4em;
+}
+.eight.wide.column p.importantMessage{
+  font-weight: lighter;
+  /* position: absolute; */
+  top: 80%;
+  /* padding-right: 16.5%; */
+  /* transform: translate(-50%, -50%); */
+  font-size: 1.5em;
+  /* padding-top: 6%; */
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  position: inherit;
+}
+.eight.wide.column h2.info{
+  display: table;
+  font-size: 3.2em;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  /* left: 60%; */
+  /* transform: translate(-50%, -50%); */
+  /* padding-botto */
 }
