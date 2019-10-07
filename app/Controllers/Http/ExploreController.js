@@ -6,7 +6,7 @@ class ExploreController {
   async index({ view, auth }) {
     const profiles = await Student.all();
     let myProfile = await auth.user.student().fetch();
-    console.log("this is logged-in id: ", myProfile.user_id);
+    // console.log("this is logged-in id: ", myProfile.user_id);
 
     // const otherStudents = studentProfiles.filter(d => d.age > 37);
 
